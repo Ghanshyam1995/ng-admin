@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+@import '~@covalent/core/theming/all-theme';
+@include mat-core();
+$md-mdprimary: ( 50: #e2f0fc, 100: #b7d9f8, 200: #87c0f3, 300: #57a6ee, 400: #3393eb, 500: #0f80e7, 600: #0d78e4, 700: #0b6de0, 800: #0863dd, 900: #0450d7, A100: #fefeff, A200: #cbdbff, A400: #98b8ff, A700: #7fa6ff, contrast: ( 50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #000000, 500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff, A100: #000000, A200: #000000, A400: #000000, A700: #000000, ));
+$md-mdaccent: ( 50: #e2f0fc, 100: #b7d9f8, 200: #87c0f3, 300: #57a6ee, 400: #3393eb, 500: #0f80e7, 600: #0d78e4, 700: #0b6de0, 800: #0863dd, 900: #0450d7, A100: #fefeff, A200: #cbdbff, A400: #98b8ff, A700: #7fa6ff, contrast: ( 50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #000000, 500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff, A100: #000000, A200: #000000, A400: #000000, A700: #000000, ));
+$md-mdwarn: ( 50: #ffebe1, 100: #feceb3, 200: #fead81, 300: #fe8c4e, 400: #fd7428, 500: #fd5b02, 600: #fd5302, 700: #fc4901, 800: #fc4001, 900: #fc2f01, A100: #ffffff, A200: #fff1ef, A400: #ffc4bc, A700: #ffaea2, contrast: ( 50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #000000, 500: #000000, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff, A100: #000000, A200: #000000, A400: #000000, A700: #000000, ));
+$my-app-primary: mat-palette($md-mdprimary);
+$my-app-accent: mat-palette($md-mdaccent);
+$my-app-warn: mat-palette($md-mdwarn);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+@include covalent-theme($my-app-theme);

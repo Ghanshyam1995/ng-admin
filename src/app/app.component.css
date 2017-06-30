@@ -1,0 +1,18 @@
+.col {
+    border: 1px solid coral;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.col:hover {
+    cursor: pointer;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button:before {
+    content: '\f0c9';
+    font: 42px fontawesome;
+}

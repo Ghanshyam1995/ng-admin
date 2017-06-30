@@ -1,20 +1,55 @@
-<!--The whole content below can be removed with the new code.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=" />
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-  </li>
-</ul>
+<!--<div fxLayout="column" fxLayoutGap="8px" [@listAnimation]="items.length">
 
+    <div fxLayout fxLayoutGap="15px" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap.xs="10px">
+        <button md-button color="primary" (click)="AddItemAtFirst()">Add Item at Start </button>
+        <button md-button color="primary" (click)="AddItem()">Add Item At Last</button>
+        <button md-raised-button color="accent" (click)="RemoveFirstItem()"> Remove First Item</button>
+        <button md-raised-button color="accent" (click)="RemoveLastElement()">Remove Last Item</button>
+    </div>
+    <div id="list" class="list" *ngFor="let item of items">
+        <md-card>
+            <md-card-content>
+                {{item}}
+            </md-card-content>
+        </md-card>
+    </div>
+
+    <div @divAnim fxLayout="row" fxLayoutAlign="center" fxLayoutGap="8px" fxLayout.xs="column">
+        <div class="col" fxFlex>
+            <p>In this tutorial, learn how to use the new Query and Stagger animation-specific functions</p>
+        </div>
+        <div class="col" fxFlex>
+            <p>In this tutorial, learn how to use the new Query and Stagger animation-specific functions</p>
+        </div>
+        <div class="col" fxFlex>
+            <p>In this tutorial, learn how to use the new Query and Stagger animation-specific functions</p>
+        </div>
+    </div>
+</div>-->
+<!--<router-outlet></router-outlet>-->
+<td-layout mode="side" [opened]="false">
+
+    <div td-sidenav-content>
+        <td-expansion-panel label="Label goes here">
+            <div>
+                <md-list>
+                    <md-list-item>
+                        <button md-button>Home</button>
+                    </md-list-item>
+                </md-list>
+            </div>
+        </td-expansion-panel>
+    </div>
+    <td-layout-nav toolbarTitle="Home">
+        <div td-toolbar-content>
+            <!--Toolbar content Here-->
+        </div>
+        <td-layout-card-over cardTitle="{{title.replace('/','') | uppercase}}" cardWidth="85">
+            <div class="app-content" style="padding:10px 10px">
+
+            </div>
+            <router-outlet></router-outlet>
+        </td-layout-card-over>
+
+    </td-layout-nav>
+</td-layout>

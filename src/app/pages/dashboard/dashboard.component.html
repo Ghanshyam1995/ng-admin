@@ -1,0 +1,8 @@
+<div fxLayout fxLayoutGap="10px" fxLayout.xs="column" fxLayoutGap.xs="10px" fxLayoutAlign="center">
+    <div fxFlex="50%">
+        <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+    <div fxFlex="50%">
+        <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+</div>
